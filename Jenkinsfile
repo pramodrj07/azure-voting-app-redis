@@ -9,7 +9,7 @@ pipeline {
       }
       stage('Docker build') {
          steps {
-            sh(script: 'docker images -a')
+            sh(script: 'brew install docker')
             sh(script: """
                cd azure-vote/
                docker images -a
@@ -21,4 +21,3 @@ pipeline {
       }
    }
 }
-      

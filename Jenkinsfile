@@ -9,7 +9,7 @@ pipeline {
       }
       stage('Docker build') {
          steps {
-            sh(script: 'brew install docker')
+            sh(script: 'sudo apt install docker')
             sh(script: """
                cd azure-vote/
                docker images -a
